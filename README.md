@@ -1,4 +1,4 @@
-# Group YYY - {Short snappy Title of your project}
+# Group 02 - Global Energy Analysis
 
 **Please remember to update this section**
 
@@ -24,7 +24,7 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 **Please remember to update this section**
 
-- Person 1: one sentence about you!
+- Michael Somppi: I'm an electrical engineering student interested in power systems and modernizing the electric grid to better support renewable energy sources.
 - Person 2: one sentence about you!
 - Person 3: one sentence about you!
 
@@ -34,7 +34,7 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 {You can use this area for any images you want to include}
 
-<img src ="images/test.png" width="100px">
+<img src ="https://d346xxcyottdqx.cloudfront.net/wp-content/uploads/2020/09/137001879_lassedesignen-_123rf-_clean_energy_report.jpg" width="400px">
 
 ## References
 
@@ -42,5 +42,7 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 {Add your credits, acknowledgements, references, or citations **including a link to the data source** here}
 
+Link to data source:<br> [https://www.kaggle.com/datasets/pralabhpoudel/world-energy-consumption](https://www.kaggle.com/datasets/pralabhpoudel/world-energy-consumption)
 
+Link to reference website: <br> [https://ourworldindata.org/energy](https://ourworldindata.org/energy)
 
