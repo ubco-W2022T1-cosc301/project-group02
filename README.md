@@ -27,13 +27,9 @@ This dataset is provided by [Our World in Data](https://ourworldindata.org/), a 
 ## Team Members
 
 - Michael Somppi: I'm an electrical engineering student interested in power systems and modernizing the electric grid to better support renewable energy sources.
-<<<<<<< HEAD
 - Abijeet Dhillon: I'm a second year computer science student at the University of British Columbia, Okanagan.
-- Person 3: one sentence about you!
-=======
-- Abijeet Dhillon: I'm a second year computer science student and I am interested in how different countries get their energy from, more specifically; what are the top 10 countries when it comes to getting their energy from clean sources and what are the top 10 countries when it comes to getting their energy from the most polluting sources?
 - Alex Huisman: I am a fourth year management student, musician, and soccer player who is interested in managing and analyzing data.
->>>>>>> f791409a086bb389c68c33d71c15226cab7c62d2
+
 
 ## Images
 
