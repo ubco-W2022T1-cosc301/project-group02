@@ -8,15 +8,8 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 Energy is one of the big global problems we, as a society, are facing. By analyzing energy consumption data, we can shed more light on our current situation and hopefully provide motivation and evidence to support the effort to move towards net-zero emissions.
 
-Specific areas we are looking to explore are:
-- The shift in the global energy mix over the time span this dataset covers
-- The shifts in certain countries' energy mixes over time
-- Countries that produce the most energy in a clean means of production
-- Countries that produce the most energy in a polluting means of production
-- Countries which have the lowest emissons per capita
-- Which countries have the highest production of energy each decade?
-- Correlations between any of the above points
-...
+Some of the specific areas we are lookinig to explore are the shifts in the energy mix over the time span this dataset covers for certain coutries and globally. We also hope to find the countries that produce the most amount of their energy in a clean matter of production, and in a polluting matter of production. Another topic of interest is the change in generation of electricity compared to other means of energy. This allows us to ask which countries produce the highest share of electricity compared to their overall energy production, which further lets us discover why these countries are able to produce more of their energy via renewables by finding any patterns or similarities among those countries. 
+
 
 ## Describe your dataset in about 150-200 words
 
@@ -32,8 +25,7 @@ This dataset is provided by [Our World in Data](https://ourworldindata.org/), a 
 
 
 ## Images
-
-<img src ="https://d346xxcyottdqx.cloudfront.net/wp-content/uploads/2020/09/137001879_lassedesignen-_123rf-_clean_energy_report.jpg" width="400px">
+![An image related to our topic of global energy analysis.](images/topicImage.jpg)
 
 ## References
 
