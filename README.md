@@ -27,5 +27,7 @@ This dataset is provided by [Our World in Data](https://ourworldindata.org/), a 
 
 Link to data source:<br> [https://www.kaggle.com/datasets/pralabhpoudel/world-energy-consumption](https://www.kaggle.com/datasets/pralabhpoudel/world-energy-consumption)
 
+Link to codebook for dataset column descriptions:<br> [https://github.com/owid/energy-data/blob/master/owid-energy-codebook.csv](https://github.com/owid/energy-data/blob/master/owid-energy-codebook.csv)
+
 Hannah Ritchie, Max Roser and Pablo Rosado (2020) - "Energy". Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/energy' [Online Resource]
 
