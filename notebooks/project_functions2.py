@@ -7,37 +7,43 @@ def load_data(path):
 
 # Function to only keep the necessary columns and remove NaN cells
 def clean_data(dataframe):
-    cleaned_df = dataframe[['country','year', 'cse', 'fccp', 'fse']]
+    cleaned_df = dataframe[['country', 'year', 'coal_cons_change_pct', 'coal_cons_change_twh', 'coal_cons_per_capita', 'coal_consumption', 'coal_elec_per_capita', 'coal_electricity', 'coal_prod_change_pct', 'coal_prod_change_twh', 'coal_prod_per_capita', 'coal_production', 'coal_share_elec', 'coal_share_energy']]
     cleaned_df = cleaned_df.dropna()
     return cleaned_df
 
-# Function to rename columns for ease of typing
-def rename(dataframe):
-    dataframe.rename(columns = {'coal_share_elec':'cse'})
-    dataframe.rename(columns = {'fossil_cons_change_pct':'fccp'})
-    dataframe.rename(columns = {'fossil_share_elec':'fse'})
-    return dataframe
-    
-# Function to sort the dataframe from highest to lowest
-def sort_by(dataframe, column_name):
-    dataframe.sort_values(column_name, ascending = True)
-    return dataframe
+# Function to create a data frame for 1990 values
+def data_1990(path):
+    df = load_data(path)
+    df = clean_data(path)
+    df = df.loc[df["year"] == 1990]
+    return df
+
+# Function to create a data frame for 2018 values
+def data_1990(path):
+    df = load_data(path)
+    df = clean_data(path)
+    df = df.loc[df["year"] == 2018]
+    return df
+
 
 # Function that wraps together the method chains
 def load_and_process(path):
     # Method Chain 1
     df1 = (
-        pd.read_csv(path)
-        .rename(columns = {'coal_share_elec':'cse'})
-        .rename(columns = {'fossil_cons_change_pct':'fccp'})
-        .rename(columns = {'fossil_share_elec':'fse'})
+        pd.read_csv(path)[['country', 'year', 'coal_cons_change_pct', 'coal_cons_change_twh', 'coal_cons_per_capita', 'coal_consumption', 'coal_elec_per_capita', 'coal_electricity', 'coal_prod_change_pct', 'coal_prod_change_twh', 'coal_prod_per_capita', 'coal_production', 'coal_share_elec', 'coal_share_energy']]
         .dropna()
     )
     # Method Chain 2
     df2 = (
         df1
-        .sort_values('year', ascending = True)
+        .rename(columns={'year' : 'Year', 'country' : 'Country'})
+        .rename(columns={'coal_cons_change_pct' : 'Annual percentage change in coal consumption', 'coal_cons_change_twh' : 'Annual change in coal consumption, measured in terawatt-hours'})
+        .rename(columns={'coal_cons_per_capita' : 'Per capita primary energy consumption from coal, measured in kilowatt-hours', 'coal_consumption' : 'Primary energy consumption from coal, measured in terawatt-hours'})
+        .rename(columns={'coal_elec_per_capita' : 'Per capita electricity generation from coal, measured in kilowatt-hours', 'coal_electricity' : 'Electricity generation from coal, measured in terawatt-hours	'})
+        .rename(columns={'coal_prod_change_pct' : 'Annual percentage change in coal production', 'coal_prod_change_twh' : 'Annual change in coal production, measured in terawatt-hours'})
+        .rename(columns={'coal_prod_per_capita' : 'Per capita coal production, measured in kilowatt-hours', 'coal_production' : 'Coal production, measured in terawatt-hours'})
+        .rename(columns={'coal_share_elec' : 'Share of electricity generation that comes from coal', 'coal_share_energy' : 'Share of primary energy consumption that comes from coal'})
+        .sort_values('Year', ascending = True)
     )
-    # Call function to get rid of unnecessary columns
-    df3 = clean_data(df2)
-    return df3
+    return df2
+  
