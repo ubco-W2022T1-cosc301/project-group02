@@ -1,3 +1,6 @@
+
+
+
 import pandas as pd
 
 # Function to load data
@@ -13,10 +16,21 @@ def clean_data(dataframe):
 
 # Function to create a data frame for 1990 values
 def data_1990(path):
-    df = load_data(path)
-    df = clean_data(path)
+    df = load_and_process(path)
     df = df.loc[df["year"] == 1990]
     return df
+
+# Function to create a data frame for only coal consumption from regular data frame
+def coal_con_data(dataframe):
+    coal_con_df = dataframe.sort_values('coal_cons_change_twh', ascending=False)
+    coal_con_df = coal_con_df[['country', 'year', 'coal_cons_change_twh']]
+    return coal_con_df
+
+# Function to create a data frame for only coal production from regular data frame
+def coal_prod_data(dataframe):
+    coal_prod_df = dataframe.sort_values('coal_prod_change_twh', ascending=False)
+    coal_prod_df = coal_prod_df[['country', 'year', 'coal_prod_change_twh']]
+    return coal_prod_df
 
 # Function to create a data frame for 2018 values
 def data_1990(path):
@@ -46,4 +60,3 @@ def load_and_process(path):
         .sort_values('Year', ascending = True)
     )
     return df2
-  
