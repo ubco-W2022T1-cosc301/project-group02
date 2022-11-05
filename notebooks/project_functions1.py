@@ -39,7 +39,17 @@ def electricitycomp(path):
     # Method Chain 2 (create electricity comparison dataframe)
     df_comp = (
         df_electricity[["year", "country", "population", "gdp", "carbon_intensity_elec", "low_carbon_electricity", "low_carbon_elec_per_capita", "low_carbon_share_elec", "electricity_generation", "per_capita_electricity", "electricity_demand"]]
-        .rename(columns={"year" : "Year", "country" : "Country", "population" : "Population", "gdp" : "GDP", "carbon_intensity_elec" : "Carbon Intensity", "low_carbon_electricity" : "Low Carbon Electricity", "low_carbon_elec_per_capita" : "Per Capita Low Carbon", "low_carbon_share_elec" : "Share from Low Carbon Sources", "electricity_generation" : "Electricity Generation", "per_capita_electricity" : "Per Capita Generation", "electricity_demand" : "Electricity Demand"})
+        .rename(columns={"year" : "Year"})
+        .rename(columns={"country" : "Country"})
+        .rename(columns={"population" : "Population"})
+        .rename(columns={"gdp" : "GDP"})
+        .rename(columns={"carbon_intensity_elec" : "Carbon Intensity"})
+        .rename(columns={"low_carbon_electricity" : "Low Carbon Electricity"})
+        .rename(columns={"low_carbon_elec_per_capita" : "Per Capita Low Carbon"})
+        .rename(columns={"low_carbon_share_elec" : "Share from Low Carbon Sources"})
+        .rename(columns={"electricity_generation" : "Electricity Generation"})
+        .rename(columns={"per_capita_electricity" : "Per Capita Generation"})
+        .rename(columns={"electricity_demand" : "Electricity Demand"})
     )
     
     # Remove rows from prior to the year 2000
@@ -70,6 +80,9 @@ def electricitymean(path):
     # Call function to reset index
     df_mean = reset_index(df_mean)
     
+    # Keep only top 10 countries
+    df_mean = df_mean.head(10)
+    
     return df_mean
 
 # Function to produce the electricity mix dataframe
@@ -87,7 +100,8 @@ def electricitymix(path):
     df_elecmix = (
         pd.concat([df_3, df_4], join='outer', axis=1)
         .drop(columns=["other_renewables_elec_per_capita", "renewables_elec_per_capita", "low_carbon_elec_per_capita"])
-        .rename(columns={'year' : 'Year', 'country' : 'Country'})
+        .rename(columns={'year' : 'Year'})
+        .rename(columns={'country' : 'Country'})
     )
     
     # Simplify column labels
