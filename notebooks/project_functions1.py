@@ -1,13 +1,13 @@
 import pandas as pd
 import numpy as np
 
-# Function to reset index and drop the index column
 def reset_index(dataframe):
+    """Function to reset index and drop the index column"""
     dataframe = dataframe.reset_index(drop=True)
     return dataframe
 
-# Function to produce master electricity dataframe
 def electricitymaster(path):
+    """Function to produce master electricity dataframe.\n Contains all columns related to electricity.\n All null value rows removed. All non-countries impacting further analysis removed.  """
     
     # Load data
     df = pd.read_csv(path)
@@ -30,8 +30,8 @@ def electricitymaster(path):
     
     return df_electricity
 
-# Function to produce the electricity comparison dataframe
 def electricitycomp(path):
+    """Function to produce the electricity comparison dataframe.\n This dataframe contains all columns related to overall electricity metrics.\n Removed years prior to the year 2000.\n Created a new column for per capita electricity demand."""
     
     # Call the electricity master function
     df_electricity = electricitymaster(path)
@@ -61,32 +61,30 @@ def electricitycomp(path):
     
     return df_comp
 
-# Function to produce the electricity comparison mean values dataframe
 def electricitymean(path):
+    """Function to produce the electricity comparison mean values dataframe.\n This dataframe contains the top 10 countries based on electricity generation per capita.\n All values are mean values from the years 2016-2020."""
     
     # Call the electricity mean function
     df_comp = electricitycomp(path)
     
     # Further widdle down dataframe to look at the mean values from 2016-2020
-    df_mean = df_comp[df_comp["Year"] >= 2016]
-    df_mean = df_mean[df_mean["Year"] <= 2020]
+    df_5 = df_comp[df_comp["Year"] >= 2016]
+    df_5 = df_5[df_5["Year"] <= 2020]
     
-    # Find the mean values over the 5 year span for each country
-    df_mean = df_mean.groupby(["Country"], as_index=False).mean()
-    
-    # Sort according to per capita electricity generation
-    df_mean = df_mean.sort_values(["Per Capita Generation"], ascending=False)
-    
-    # Call function to reset index
-    df_mean = reset_index(df_mean)
-    
-    # Keep only top 10 countries
-    df_mean = df_mean.head(10)
+    # Method Chain 3 (Find the mean values over the 5 year span for each country and sort according to per capita electricity generation)
+    df_mean = (
+        df_5.groupby(["Country"], as_index=False).mean()
+        .sort_values(["Per Capita Generation"], ascending=False)
+        .reset_index(drop=True)
+        .drop(columns=["Year"])
+        .head(10)
+        .round(decimals=2)
+    )
     
     return df_mean
 
-# Function to produce the electricity mix dataframe
 def electricitymix(path):
+    """Function to produce the electricity mix dataframe.\n Contains the energy mix for the top 10 countries per capita electricity generation identified using the electricity comparison mean values dataframe.\n The dataframe was manipulated using pd.melt to convert all electricity mix columns to row, making it easier to plot using Seaborn."""
     
     # Call the electricity master function
     df_electricity = electricitymaster(path)
@@ -96,7 +94,7 @@ def electricitymix(path):
     # Create another dataframe with columns that contain the string 'elec_per_capita'
     df_4 = df_electricity.loc[:, df_electricity.columns.str.contains("elec_per_capita")]
     
-    # Method Chain 3 (create energy mix dataframe)
+    # Method Chain 4 (create energy mix dataframe)
     df_elecmix = (
         pd.concat([df_3, df_4], join='outer', axis=1)
         .drop(columns=["other_renewables_elec_per_capita", "renewables_elec_per_capita", "low_carbon_elec_per_capita"])
