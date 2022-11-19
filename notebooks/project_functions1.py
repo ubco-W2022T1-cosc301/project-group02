@@ -119,3 +119,40 @@ def electricitymix(path):
     df_elecmix = reset_index(df_elecmix)
     
     return df_elecmix
+
+### Tableau Dataframe
+# Wrangle data with the same process used to create the electricity mix dataframe, only this time, keep all the countries
+def elecmix(path):
+    """Function to produce an all encompassing the electricity mix dataframe.\n Contains the energy mix for all countries per capita electricity generation.\n The dataframe was manipulated using pd.melt to convert all electricity mix columns to row, making it easier to plot using Seaborn."""
+    
+    # Call the electricity master function
+    df_electricity = electricitymaster(path)
+
+    # Create dataframe with desired columns
+    df_3 = df_electricity[["year", "country"]]
+    # Create another dataframe with columns that contain the string 'elec_per_capita'
+    df_4 = df_electricity.loc[:, df_electricity.columns.str.contains("elec_per_capita")]
+    
+    # Method Chain (create energy mix dataframe)
+    df_elecmix = (
+        pd.concat([df_3, df_4], join='outer', axis=1)
+        .drop(columns=["other_renewables_elec_per_capita", "renewables_elec_per_capita", "low_carbon_elec_per_capita"])
+        .rename(columns={'year' : 'Year'})
+        .rename(columns={'country' : 'Country'})
+    )
+    
+    # Simplify column labels
+    df_elecmix.columns = df_elecmix.columns.str.replace('_elec_per_capita', '')
+    
+    # Convert columns to rows using pd.melt
+    df_elecmix = pd.melt(df_elecmix, id_vars=["Year", "Country"], value_vars=["biofuel", "coal", "fossil", "gas", "hydro", "nuclear", "oil", "other_renewables_exc_biofuel", "solar", "wind"], var_name="Electricity Mix", value_name="Per Capita Electricity (KW-hrs)")
+    
+    # Filter dataset and reset index  
+    df_elecmix1 = (
+        df_elecmix.loc[df_elecmix["Year"] >= 2000]
+        .loc[df_elecmix["Per Capita Electricity (KW-hrs)"] != 0]
+        .dropna(subset=["Per Capita Electricity (KW-hrs)"])
+        .reset_index(drop=True)
+    )
+    
+    return df_elecmix1
