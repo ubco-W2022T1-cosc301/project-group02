@@ -97,7 +97,7 @@ def electricitymix(path):
     # Method Chain 4 (create energy mix dataframe)
     df_elecmix = (
         pd.concat([df_3, df_4], join='outer', axis=1)
-        .drop(columns=["other_renewables_elec_per_capita", "renewables_elec_per_capita", "low_carbon_elec_per_capita"])
+        .drop(columns=["other_renewables_elec_per_capita", "renewables_elec_per_capita", "low_carbon_elec_per_capita", "fossil_elec_per_capita"])
         .rename(columns={'year' : 'Year'})
         .rename(columns={'country' : 'Country'})
     )
@@ -110,7 +110,7 @@ def electricitymix(path):
     df_elecmix = df_elecmix[df_elecmix["Country"].str.contains("United States Virgin Islands")==False]
     
     # Convert columns to rows using pd.melt
-    df_elecmix = pd.melt(df_elecmix, id_vars=["Year", "Country"], value_vars=["biofuel", "coal", "fossil", "gas", "hydro", "nuclear", "oil", "other_renewables_exc_biofuel", "solar", "wind"], var_name="Electricity Mix", value_name="Per Capita Electricity (KW-hrs)")
+    df_elecmix = pd.melt(df_elecmix, id_vars=["Year", "Country"], value_vars=["biofuel", "coal", "gas", "hydro", "nuclear", "oil", "other_renewables_exc_biofuel", "solar", "wind"], var_name="Electricity Mix", value_name="Per Capita Electricity (KW-hrs)")
     
     # Filter dataset and reset index
     df_elecmix = df_elecmix[df_elecmix["Year"] >= 2000]
@@ -136,7 +136,7 @@ def elecmix(path):
     # Method Chain (create energy mix dataframe)
     df_elecmix = (
         pd.concat([df_3, df_4], join='outer', axis=1)
-        .drop(columns=["other_renewables_elec_per_capita", "renewables_elec_per_capita", "low_carbon_elec_per_capita"])
+        .drop(columns=["other_renewables_elec_per_capita", "renewables_elec_per_capita", "low_carbon_elec_per_capita", "fossil_elec_per_capita"])
         .rename(columns={'year' : 'Year'})
         .rename(columns={'country' : 'Country'})
     )
@@ -145,14 +145,12 @@ def elecmix(path):
     df_elecmix.columns = df_elecmix.columns.str.replace('_elec_per_capita', '')
     
     # Convert columns to rows using pd.melt
-    df_elecmix = pd.melt(df_elecmix, id_vars=["Year", "Country"], value_vars=["biofuel", "coal", "fossil", "gas", "hydro", "nuclear", "oil", "other_renewables_exc_biofuel", "solar", "wind"], var_name="Electricity Mix", value_name="Per Capita Electricity (KW-hrs)")
+    df_elecmix = pd.melt(df_elecmix, id_vars=["Year", "Country"], value_vars=["biofuel", "coal", "gas", "hydro", "nuclear", "oil", "other_renewables_exc_biofuel", "solar", "wind"], var_name="Electricity Mix", value_name="Per Capita Electricity (KW-hrs)")
     
-    # Filter dataset and reset index  
-    df_elecmix1 = (
-        df_elecmix.loc[df_elecmix["Year"] >= 2000]
-        .loc[df_elecmix["Per Capita Electricity (KW-hrs)"] != 0]
-        .dropna(subset=["Per Capita Electricity (KW-hrs)"])
-        .reset_index(drop=True)
-    )
+    # Filter dataset and reset index
+    df_elecmix = df_elecmix[df_elecmix["Year"] >= 2000]
+    df_elecmix = df_elecmix[df_elecmix["Per Capita Electricity (KW-hrs)"] != 0]
+    df_elecmix = df_elecmix.dropna(subset=["Per Capita Electricity (KW-hrs)"])
+    df_elecmix1 = reset_index(df_elecmix)
     
     return df_elecmix1
