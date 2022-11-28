@@ -10,9 +10,9 @@ The top 10 countries based on electricity generation per capita and their electr
 
 ![Top 10 Countries Electricity Mix](images/Analysis1_01.png)
 
-This figure shows the breakdown of each country's electricity mix taken as the average from year 2015 to 2020. The category "other renewables excluding biofuel" includes biomass and waste, geothermal, wave and tidal. We can see Bahrain, Kuwait, Qatar, and the United Arab Emirates are all rich in gas resources. Iceland, Norway, and Canada all have a large supply of electricity generation from hydropower. Norway, Canada, Sweden, United States, and Finland all generate a significant amount of electricity from wind. 
+This figure shows the breakdown of each country's electricity mix taken as the average from year 2015 to 2020. The category "other renewables excluding biofuel" includes biomass and waste, geothermal, wave and tidal. We can see Bahrain, Kuwait, Qatar, and the United Arab Emirates are all rich in gas resources. Iceland, Norway, and Canada all have a large supply of electricity generation from hydropower. Norway, Canada, Sweden, United States, and Finland all generate a significant amount of electricity from wind. Iceland is unique in that it is the only country to rely heavily on geothermal electricity generation.
 
-It is interesting to note that the makeup of the top 10 countries by electricity generation per capita includes cold climate countries and countries wealthy in fossil fuel resources. Heating consumes large amounts of electricity, so presumably citizens in the cold climate countries listed in the top 10 use a large share of electricity for heating purposes. The countries wealthy in fossil fuel resources are presumably exploiting their resources to export energy for profit. Further research is needed to determine whether this is the case, or if the countries have high electricity consumption for industrial processes and/or air conditioning.
+It is interesting to note that the makeup of the top 10 countries by electricity generation per capita includes cold climate countries and countries wealthy in fossil fuel resources. Heating consumes large amounts of electricity, so presumably citizens in the cold climate countries listed in the top 10 use a large share of electricity for heating purposes. The countries wealthy in fossil fuel resources are presumably exploiting their natural resources for profit via energy exports. Further research is needed to determine whether this is the case, or if these countries have high electricity consumption for industrial processes and/or air conditioning.
 
 A comparison between electricity generated from all sources versus electricity generated from low carbon sources is made in the next figure. Low carbon sources is a category encompassing nuclear, solar, wind, hydro, biofuel, biomass and waste, geothermal, wave, and tidal.
 
@@ -24,7 +24,7 @@ The following figure plots the percent share of each country's electricity produ
 
 ![Low Carbon Sources vs Carbon Emissions Correlation](images/Analysis1_03.png)
 
-This figure makes it plain to see the correlation between share from low carbon sources and the carbon emissions from electricity generation. Even though Iceland generates by far the most electricity per capita, it has very low carbon emissions associated with electricity generation because 100% of its electricity is generated from low carbon sources.
+This figure makes it plain to see the correlation between the percent share from low carbon sources and the carbon emissions from electricity generation. Even though Iceland generates by far the most electricity per capita, it has very low carbon emissions associated with electricity generation because 100% of its electricity generation is from low carbon sources.
 
 The final visualization for this analysis section illustrates the trends for each electricity generation source over a 20 year time span. For this plot, the top 10 countries previously highlighted were combined to find the overall trends.
 
@@ -39,6 +39,6 @@ The following generalized trends for electricity generation sources are observed
 | Wind | Nuclear |  |
 | Solar |  |  |
 
-Based on these observations, it can be concluded that there is a trend in these countries to generate more electricity from low carbon sources and phase out non-renewable sources, however the gas remains stable as the second largest electricity generation source behind hydro.
+Based on these observations, it can be concluded that there is a trend in these countries to generate more electricity from low carbon sources and phase out non-renewable sources. In spite of this generalized trend, gas remains stable as the second largest electricity generation source behind hydro.
 
 The full analysis notebook pertaining to these visualizations, including the code and data, [can be found here.](https://github.com/ubco-W2022T1-cosc301/project-group02/blob/main/notebooks/analysis1.ipynb)
