@@ -9,7 +9,7 @@ In this project, I set out to answer 3 main research questions:
 - Research Question 3) 
     - Has the same country dominated coal energy production from 1990 to 2018?
     
-Whilst exploring the dataset, nothing jumped out at me since this dataset was from a very reputable source and was created professionally. I kept only the relevant columns through the data wrangling and cleaning process. Below, I will show some of the graph I created during the exploratory data analysis which will not be used answer the research questions listed above.
+Whilst exploring the dataset, nothing jumped out at me since this dataset was from a very reputable source and was created professionally. I kept only the relevant columns through the data wrangling and cleaning process. Below, I will show some of the graphs I created during the exploratory data analysis which will not be used answer the research questions listed above.
 
 ![Percentage of Electricity Generation via Coal in 2017](/images/ad_elec_share_2017.png)
 
@@ -17,11 +17,11 @@ This graph displays the percentage of energy a country produced via coal in 2017
 
 ![Change in Coal Consumption](/images/ad_coal_change_cons.png)
 
-This graph shows the annual change in coal consumption 
+This graph shows the annual change in coal consumption for each country as a sum for all the years of the dataset.
 
+![Change in Coal Production](/images/ad_coal_change_prod.png)
 
-
-A summary of the highlights of your EDA, where you can show some visualizations of the exploratory data analysis your group did.
+This graph is similiar to the one above, but show the anual change in coal production as a sum for all the years of the dataset.
 
 
 # Which countries produce the highest and lowest percentage of their energy via coal when compared to that country's overall energy mix? 
