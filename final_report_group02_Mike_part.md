@@ -14,6 +14,14 @@ This figure shows the breakdown of each country's electricity mix taken as the a
 
 It is interesting to note that the makeup of the top 10 countries by electricity generation per capita includes cold climate countries and countries wealthy in fossil fuel resources. Heating consumes large amounts of electricity, so presumably citizens in the cold climate countries listed in the top 10 use a large share of electricity for heating purposes. The countries wealthy in fossil fuel resources are presumably exploiting their natural resources for profit via energy exports. Further research is needed to determine whether this is the case, or if these countries have high electricity consumption for industrial processes and/or air conditioning.
 
+For geographic context, the map below highlights the top 10 countries and their electricity generation per capita on a colour scale.
+
+![Top 10 Countries Map](images/Analysis1_05.png)
+
+Notice Bahrain, Kuwait, Qatar, and the United Arab Emirates are all geographically located in close proximity.
+
+![Countries rich in gas resources](images/Analysis1_06.png)
+
 A comparison between electricity generated from all sources versus electricity generated from low carbon sources is made in the next figure. Low carbon sources is a category encompassing nuclear, solar, wind, hydro, biofuel, biomass and waste, geothermal, wave, and tidal.
 
 ![Top 10 Countries Low Carbon Sources](images/Analysis1_02.png)
