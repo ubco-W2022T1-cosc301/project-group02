@@ -11,6 +11,13 @@ In this project, I set out to answer 3 main research questions:
     
 Whilst exploring the dataset, nothing jumped out at me since this dataset was from a very reputable source and was created professionally. I kept only the relevant columns through the data wrangling and cleaning process. Below, I will show some of the graph I created during the exploratory data analysis which will not be used answer the research questions listed above.
 
+![Percentage of Electricity Generation via Coal in 2017](/images/ad_elec_share_2017.png)
+
+This graph displays the percentage of energy a country produced via coal in 2017 when compared to its' overall energy share mix.
+
+![Change in Coal Consumption](/images/ad_coal_change_cons.png)
+
+This graph shows the annual change in coal consumption 
 
 
 
@@ -72,4 +79,4 @@ A table of the top coal producing countries in 1990 and 2018:
 | Russia         | 2158.076              | 2562.787              | 
 | Indonesia      | 73.534                | 3822.470              | 
 
-This section has determined that the same country has dominated coal energy production from 1990 to 2018, that country being China. China has increased its' coal production by nearly 3.5 times and produces nearly 5 times as much coal as the United States which is in second place.
+This section has determined that the same country has dominated coal energy production from 1990 to 2018, that country being China. China has increased its' coal production by nearly 3.5 times and produces nearly 5 times as much coal as the United States which is in second in terms of coal production.
