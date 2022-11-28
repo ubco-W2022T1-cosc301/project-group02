@@ -22,13 +22,13 @@ The main observation from this visualization is the cold climate countries (Icel
 
 The following figure plots the percent share of each country's electricity produced from low carbon sources vs the carbon intensity of electricity production, measured in grams of carbon dioxide emitted per kilowatt-hour.
 
-![Low Carbon Sources vs Carbon Emissions Correlation](images/Analysis1_03)
+![Low Carbon Sources vs Carbon Emissions Correlation](images/Analysis1_03.png)
 
 This figure makes it plain to see the correlation between share from low carbon sources and the carbon emissions from electricity generation. Even though Iceland generates by far the most electricity per capita, it has very low carbon emissions associated with electricity generation because 100% of its electricity is generated from low carbon sources.
 
 The final visualization for this analysis section illustrates the trends for each electricity generation source over a 20 year time span. For this plot, the top 10 countries previously highlighted were combined to find the overall trends.
 
-![Overall Electricity Mix Trends](images/Analysis1_04)
+![Overall Electricity Mix Trends](images/Analysis1_04.png)
 
 The following generalized trends for electricity generation sources are observed in the plot above:
 
