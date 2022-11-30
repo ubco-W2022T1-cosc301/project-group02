@@ -1,8 +1,6 @@
 # Final Report - Global Energy Analysis
 ## Introduction
-Energy is one of the big global problems we, as a society, are facing. By analyzing energy consumption data, we can shed more light on our current situation and hopefully provide motivation and evidence to support the effort to move towards net-zero emissions.
-
-This report explores global electricity generation per capita, enery production from coal, and the global availability of clean energy. This dataset is provided by [Our World in Data](https://ourworldindata.org/), a research and database that aims to "make progress against the world's largest problems".
+Energy is one of the big global problems we, as a society, are facing. By analyzing energy consumption data, we can shed more light on our current situation and hopefully provide motivation and evidence to support the effort to move towards net-zero emissions. This report explores global electricity generation per capita, enery production from coal, and the global availability of clean energy. This dataset is provided by [Our World in Data](https://ourworldindata.org/), a research and database that aims to "make progress against the world's largest problems".
 
 ## Analysis 1 - Electricity Generation Per Capita
 ### Research Questions
