@@ -127,12 +127,12 @@ It is very clear that China has clearly become the top coal producer by a great 
 
 A table of the top coal producing countries in 1990 and 2018:
 
-| Country        | Coal Production (TWh) | Coal Production (TWh) | 
-| :---           | :---:                 | :---:                 | 
-| China          | 6279.520              | 21352.949             | 
-| United States  | 6260.927              | 4277.451              | 
-| Russia         | 2158.076              | 2562.787              | 
-| Indonesia      | 73.534                | 3822.470              | 
+| Country        | Coal Production in 1990 (TWh) | Coal Production in 2018 (TWh) | 
+| :---           | :---:                         | :---:                         | 
+| China          | 6279.520                      | 21352.949                     | 
+| United States  | 6260.927                      | 4277.451                      | 
+| Russia         | 2158.076                      | 2562.787                      | 
+| Indonesia      | 73.534                        | 3822.470                      | 
 
 This section has determined that the same country has dominated coal energy production from 1990 to 2018, that country being China. China has increased its' coal production by nearly 3.5 times and produces nearly 5 times as much coal as the United States which is in second in terms of coal production.
 
