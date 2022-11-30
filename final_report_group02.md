@@ -1,6 +1,6 @@
 # Final Report - Global Energy Analysis
 ## Introduction
-Energy is one of the big global problems we, as a society, are facing. By analyzing energy consumption data, we can shed more light on our current situation and hopefully provide motivation and evidence to support the effort to move towards net-zero emissions. This report explores global electricity generation per capita, enery production from coal, and the global availability of clean energy. This dataset is provided by [Our World in Data](https://ourworldindata.org/), a research and database that aims to "make progress against the world's largest problems".
+Energy is one of the big global problems we, as a society, are facing. By analyzing energy consumption data, we can shed more light on our current situation and hopefully provide motivation and evidence to support the effort to move towards net-zero emissions. Alongside this, the topic of global energy was a great interest among our group, thus contributing to the motivation to explore this dataset. This report explores global electricity generation per capita, enery production from coal, and the global availability of clean energy. This dataset is provided by [Our World in Data](https://ourworldindata.org/), a research and database that aims to "make progress against the world's largest problems".
 
 ## Analysis 1 - Electricity Generation Per Capita
 ### Research Questions
@@ -64,7 +64,7 @@ In this project, I set out to answer 3 main research questions:
 2. Which country has made the largest reduction in their usage of coal to produce energy between 1990 and 2018?
 3. Has the same country dominated coal energy production from 1990 to 2018?
     
-Whilst exploring the dataset, nothing jumped out at me since this dataset was from a very reputable source and was created professionally. I kept only the relevant columns through the data wrangling and cleaning process. Below, I will show some of the graphs I created during the exploratory data analysis which will not be used answer the research questions listed above.
+Whilst exploring the dataset, nothing jumped out at me since this dataset was from a very reputable source and was created professionally. I kept only the relevant columns through the data wrangling and cleaning process. Below, I will show some of the graphs I created during the exploratory data analysis which will not be used to answer the research questions listed above.
 
 ![Percentage of Electricity Generation via Coal in 2017](images/ad_elec_share_2017.png)
 
@@ -141,11 +141,9 @@ The full analysis notebook pertaining to these visualizations, including the cod
 ## Analysis 3 - Global Availability of Clean Energy
 TBD
 
-The full analysis notebook pertaining to these visualizations, including the code and data, [can be found here.](https://github.com/ubco-W2022T1-cosc301/project-group02/blob/main/notebooks/analysis3.ipynb)
+The full analysis notebooks pertaining to these visualizations, including the code and data, [can be found here.](https://github.com/ubco-W2022T1-cosc301/project-group02.git)
 
 
 ## Conclusion
-From the analysis completed above, the following conclusions were made.
 
-### Analysis 1
-A country's electricity generation per capita is reliant on the climate and natural resources available to a country. The countries producing the most electricity per capita are either cold climate countries or countries wealthy in gas resources. Overall, these top electricity per capita producers are trending towards generating more electricity from low carbon sources and phasing out non-renewable sources. In spite of this generalized trend, gas remains stable as the second largest electricity generation source.
+Upon completion of the project, the following conclusions were made from the analyses conducted above. In analysis 1, we found that a country's electricity generation per capita is reliant on the climate and natural resources available to a country. We also discovered that the countries which produce the most electricity per capita are either those in colder climates or those rich in resources like gas. Overall, these top electricity per capita producers are trending towards generating more electricity from low-carbon sources and phasing out non-renewable sources. Despite this generalized trend, gas remains stable as the second-largest electricity generation source. Moving onto analysis 2, we uncovered that the countries most reliant on coal to produce their energy were South Africa, Poland, and Australia, while countries that were less reliant on coal for their energy production included Venezuela and Brazil. Analysis 2 also found that not many countries have reduced the amount of coal they use, but among the few that have, the United States has made the largest reduction in their coal usage to produce energy. They made a 2000 terawatt-hour net reduction between 1990 and 2018. Also, we discovered that China dominated coal production from 1990 to 2018, with an increase of almost 3.5 times in this period. From the analysis in analysis 2, it is apparent that coal is still an energy source relied heavily upon by many countries around the world, and there doesn't seem to be a trend of transitioning away from coal any time soon. In doing this project, our group developed valuable skills that will benefit us for years, such as using python, pandas, seaborn, and tableau. Alongside these skills, we have also developed well-rounded fundamentals in data analysis. In conclusion, this project was valuable in terms of overall knowledge, and we hope you enjoy our findings.

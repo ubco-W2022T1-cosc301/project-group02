@@ -7,7 +7,7 @@ In this project, I set out to answer 3 main research questions:
 2. Which country has made the largest reduction in their usage of coal to produce energy between 1990 and 2018?
 3. Has the same country dominated coal energy production from 1990 to 2018?
     
-Whilst exploring the dataset, nothing jumped out at me since this dataset was from a very reputable source and was created professionally. I kept only the relevant columns through the data wrangling and cleaning process. Below, I will show some of the graphs I created during the exploratory data analysis which will not be used answer the research questions listed above.
+Whilst exploring the dataset, nothing jumped out at me since this dataset was from a very reputable source and was created professionally. I kept only the relevant columns through the data wrangling and cleaning process. Below, I will show some of the graphs I created during the exploratory data analysis which will not be used to answer the research questions listed above.
 
 ![Percentage of Electricity Generation via Coal in 2017](images/ad_elec_share_2017.png)
 
