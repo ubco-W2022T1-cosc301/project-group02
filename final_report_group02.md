@@ -72,11 +72,11 @@ This graph displays the percentage of energy a country produced via coal in 2017
 
 ![Change in Coal Consumption](images/ad_coal_change_cons.png)
 
-This graph shows the annual change in coal consumption for each country as a sum for all the years of the dataset.
+This graph shows the annual change in coal consumption in terawatt-hours for each country as a sum for all the years of the dataset.
 
 ![Change in Coal Production](images/ad_coal_change_prod.png)
 
-This graph is similiar to the one above, but show the anual change in coal production as a sum for all the years of the dataset.
+This graph is similiar to the one above, but shows the annual change in coal production in terawatt-hours as a sum for all the years of the dataset.
 
 
 ### Which countries produce the highest and lowest percentage of their energy via coal when compared to that country's overall energy mix? 
